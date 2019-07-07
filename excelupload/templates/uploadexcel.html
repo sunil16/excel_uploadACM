@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h4>File Address Excel</h4>
+    <form method="POST" enctype="multipart/form-data" id="fileUploadForm" class="form-group">
+      {% csrf_token %}
+      <input class="form-control" type="file" name="files" /><br/><br/>
+      <input class="btn btn-primary" type="submit" value="Submit" id="btnSubmit" />
+      <a download id='downloadfile' class="btn btn-primary"> Download</a>
+    </form>
+    <img src="{% static 'loading.gif' %}" id="loader" style="display:none; margin:auto; width:20%;" />
+  </div>
+  <script src="/static/index.js"></script>
+</body>
+</html>
