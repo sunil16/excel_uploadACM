@@ -12,6 +12,10 @@ def home(request):
     template = 'uploadexcel.html'
     return render(request,template)
 
+def get_excel_op_object():
+
+    return Excel()
+    
 def getExcel(request):
     if request.method == 'POST' and request.FILES:
         try:
@@ -26,7 +30,8 @@ def getExcel(request):
             fs = FileSystemStorage(location = EXCEL_DIR)
             filename = fs.save(myfile.name,myfile)
             request_file_location = os.path.join(EXCEL_DIR, filename)
-            Excel().readDataFromExcel(request_file_location) # precossing excel file
+            excel_obj = get_excel_op_object()
+            excel_obj.readDataFromExcel(request_file_location) # precossing excel file
             download_file_link = '/static/' + filename
 
             return JsonResponse({'link': download_file_link})

@@ -5,7 +5,6 @@ from geopy.exc import GeocoderTimedOut
 
 class Excel():
     def __init__(self):
-        self.addressList = list()
         self.gmaps = get_geo_conn()
 
     def readDataFromExcel(self ,request_file_location):
