@@ -4,7 +4,7 @@ find Lat and Lng is a django application where you can upload excel file, which 
 
   - upload excel
   - wait for result
-  - download resultant excel along latitude and longitude
+  - download resultant excel along with latitude and longitude
 
 #### Sample Excel file
 
@@ -24,7 +24,7 @@ And of course Find Lat and Lng itself is open source with a [public repository][
 
 ### Installation
 
-Find Lat and Lng requires [Django](https://www.djangoproject.com/download/) v1.8.4+ to run.
+Find Lat and Lng requires [Django](https://www.djangoproject.com/download/) v1.11.22+ to run.
 
 Install the dependencies and devDependencies and start the server.
 
@@ -62,7 +62,3 @@ MIT
    [jQuery]: <http://jquery.com>
    [Geopy]: <https://geopy.readthedocs.io/en/stable/>
    [Pandas]: <https://github.com/pandas-dev/pandas/blob/master/README.md>
-
-
-
-   
