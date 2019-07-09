@@ -1,6 +1,6 @@
 # Find latitude and longitude
 
-find Lat and Lng is a django application where you can upload excel file, which conatinas address, after process you can download resultant excel along with Lat and Lng.
+Find Lat and Lng is a django application where you can upload excel file, which conatinas address, after process you can download resultant excel along with Lat and Lng.
 
   - upload excel
   - wait for result
